@@ -338,6 +338,10 @@
 	name = "Recolorable Kilt"
 	item_path = /obj/item/clothing/under/pants/skyrat/kilt
 
+/datum/loadout_item/uniform/miscellaneous/kilt/royal
+	name = "Royal Kilt"
+	item_path = /obj/item/clothing/under/costume/skyrat/kilt/royal
+
 //TODO: split loadout's miscellaneous to have "Pants/Shorts" and "Dresses/Skirts" as options too. Misc is stupid.
 
 /datum/loadout_item/uniform/miscellaneous/dress_striped
@@ -483,6 +487,10 @@
 /datum/loadout_item/uniform/miscellaneous/tactical_hawaiian_green
 	name = "Tactical Hawaiian Outfit - Green"
 	item_path = /obj/item/clothing/under/tachawaiian/green
+
+/datum/loadout_item/uniform/miscellaneous/tactical/irish
+	name = "Irish Tactical Uniform"
+	item_path = /obj/item/clothing/under/costume/skyrat/tac/irish
 
 /datum/loadout_item/uniform/miscellaneous/maidcostume
 	name = "Maid Costume"
@@ -945,17 +953,17 @@
 	restricted_roles = list(JOB_CAPTAIN)
 	donator_only = TRUE
 
-/datum/loadout_item/under/jumpsuit/donator
+/datum/loadout_item/uniform/donator
 	donator_only = TRUE
 
-/datum/loadout_item/under/jumpsuit/donator/enclavesergeant
+/datum/loadout_item/uniform/donator/enclavesergeant
 	name = "Enclave - Sergeant"
 	item_path = /obj/item/clothing/under/syndicate/skyrat/enclave
 
-/datum/loadout_item/under/jumpsuit/donator/enclaveofficer
+/datum/loadout_item/uniform/donator/enclaveofficer
 	name = "Enclave - Officer"
 	item_path = /obj/item/clothing/under/syndicate/skyrat/enclave/officer
 
-/datum/loadout_item/under/jumpsuit/donator/blondie
+/datum/loadout_item/uniform/donator/blondie
 	name = "Blonde Cowboy Uniform"
 	item_path = /obj/item/clothing/under/rank/security/detective/cowboy/armorless

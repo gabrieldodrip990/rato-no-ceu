@@ -11,10 +11,10 @@
 	build_path = /obj/item/circuit_component/item_interact
 
 /datum/techweb_node/comp_advanced_interacts
-	id = "comp_advanced_interacts"
+	id = TECHWEB_NODE_COMP_INTERACTION_COMPONENT
 	display_name = "Advanced Action Components"
 	description = "Grants access to more advanced action components for the drone shell."
-	prereq_ids = list("programmed_robot")
+	prereq_ids = list(TECHWEB_NODE_PROGRAMMED_ROBOT)
 	design_ids = list(
 		"comp_mine",
 		"comp_iinteract",
@@ -39,7 +39,7 @@
 	id = "comp_reagent_injector_bluespace"
 	build_path = /obj/item/circuit_component/reagent_injector_bluespace
 
-/datum/techweb_node/adv_shells/New()
+/datum/techweb_node/riot_supression/New()
 	. = ..()
 	design_ids += "comp_tscanner"
 	design_ids += "comp_ccharge"
