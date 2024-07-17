@@ -591,3 +591,243 @@
   - sound: Zippos, Lighters and cigarettes now have sound
   grungussuss, ported from Beestation:
   - sound: abductee, hypnotized and brainwashed now have sound when becoming one.
+2024-07-11:
+  LT3, distributivgesetz, unit0016:
+  - bugfix: Several liquids rendering issues have been tackled.
+  SkyratBot:
+  - bugfix: stacking machines can be linked with its console via multitool
+  - bugfix: Fixed a whoopsie with bait-related calculations for fishing.
+  - qol: Docked emergency shuttles will always reset their departure timer when a
+      hostile environment is stopped, regardless of if the timer displays ETD or ERR.
+  - bugfix: Amputating a paraplegic's leg no longer miraculously allows them to walk.
+  - bugfix: Fixed lights stopping emitting light in some situations
+2024-07-12:
+  Jolly:
+  - bugfix: '[Birdshot] The Ordnance freezer chamber is now linked to an APC, much
+      like the burn chamber.'
+  - bugfix: '[Birdshot] The Janitors quarters no longer uses `/area/station/commons`,
+      instead, it uses the janitors regular area.'
+  - bugfix: '[Birdshot] The entertainment center now has an APC.'
+  - bugfix: '[Birdshot] A handful of smaller areas have received air alarms.'
+  Melbert:
+  - rscadd: 'Bot Language station trait split into two: One that affects bots (retains
+      the old weight and cost) and one that affects machine (half weight, double the
+      cost)'
+  - rscdel: Bot Language station trait and (new) Machine Language station trait no
+      longer affect newly created machines or bots, just those present at game start
+  - rscdel: Machine Language station trait cannot affect the Automated Announcer in
+      telecomms
+  SkyratBot:
+  - refactor: move `status_display_bottom_text` and `fire_alarm_light_color` to security
+      level prototypes
+  - bugfix: Mapped in grounding rods can be upgraded again (not that upgraded parts
+      do anything for it) and don't disappear when deconstructed anymore.
+  - bugfix: Fixed an oversight that caused knockdown vomits to stun instead.
+  - bugfix: Using a dual wielded deck to add another card to a single card bases the
+      position of the resulting hand of cards on the position of the card.
+  - qol: Clothing now tells you if it is pressure-proof and insulated enough for spacewalking
+      when examining it.
+  - bugfix: Vapes use correct fill level overlays
+  - qol: TV helmet no longer has gas mask FOV, nor does it give you flash sensitivity.
+  - qol: Since those are gone, removed pepper proof from it as well.
+  - bugfix: You no longer try to pull out someones eyes in combat mode if they have
+      cranial fissure
+  - rscadd: You can emag grapple gun to use it on station.
+  - code_imp: added a crash report and removes an arg
+  - refactor: Refactored a lot of speech modifiers to use a component instead of copied
+      over code.
+  - bugfix: humanoid species featured are randomized correctly once again
+  - rscadd: Most door animations now better line up with when they are/are not passable.
+  - bugfix: Fixed being unable to cauterise wounds with improvised cautery tools such
+      as welders.
+  - bugfix: fixes the rightmost wawastation cryo cell
+  - bugfix: gave tram's primary tool storage functional disposals
+  - bugfix: Steaks and meatpacks no longer have an absurd amount of blood stored inside
+      of them.
+  - balance: Buffed the matrix flip skillchip duration. Lowered the stamina cost very,
+      very slightly.
+  - qol: You can now longer matrix-flip yourself into exhaustion, unless the emote
+      is unintentional.
+  - balance: bluespace navigation gigabeacons are now unlocked with Applied Bluespace
+      Research
+2024-07-13:
+  LT3:
+  - image: Incident displays got a makeover
+  - balance: Using the delam panic button will now reset the incident display counter
+      to 0
+  Melbert:
+  - qol: Roundstart Mannitol pills are 15u (up from 14u)
+  SkyratBot:
+  - balance: If you remove a security officer's mindshield, then you can flash them
+      to make them your blood brother.
+  - balance: Experimentor's reduction chance is multiplicative, and chance to copy
+      an object has been slightly lowered.
+  - qol: adds an oxygen chamber for wawastation ordnance
+  - qol: adds some missing critical items needed to do ordnance and xenobiology
+  - balance: Experimentor will no longer duplicate Bags of Holding
+  - balance: War declaration gives 600 research points to the station
+  - balance: Cryokinesis and pyrokinesis more severely adjust temperature.
+  - balance: Cryokinesis forces a target to slow down on hit for a few seconds.
+  - balance: Pyrokinesis can ignite objects.
+  - balance: Temperature projectiles change the temperature of the target's contained
+      reagents.
+  - bugfix: french berets will no longer force the user to speak spanish
+  - balance: Tetrodotoxin can now be synthesized (bees, the odysseus mech, strange
+      seeds...)
+  - balance: Upped the amount of tetrodotoxin you can harvest from pufferfishes (or
+      any fish with the trait).
+  - spellcheck: Fixed some typos with the toxin.
+  - image: re-sprited Catwalk Floor Tiles to fit with TG floor tiles
+  - image: MOD hyposprays no longer use syringe fill sprites
+  - bugfix: password doors and shutters will now play their sound effects again instead
+      of just silently opening/closing
+  - bugfix: Fixed a bluescreen in the heretic research ui
+  - bugfix: Added a Mechbay power console to the Metastation cargo warehouse so that
+      the cargo ripley is able to be charged.
+  - qol: Heads of staff PDAs start with twice as much disk space
+  - bugfix: H.A.R.S. will no longer disable your skillchips or show you text reserved
+      for total brain removal.
+  - bugfix: The modsuit paint kit is no longer broken.
+  - bugfix: Other mobs no longer hear your breathing
+  - bugfix: makes outpost45 cause less lag
+  - balance: Moves XL beaker from Chemical Synthesis to Medbay Equipment
+  - balance: Removes Plumbing node and moves most items to Chemical synthesis node
+  - balance: Moves piercing syringe from Plumbing node to Advanced Medbay Equipment
+  - rscadd: Add the National Ice Cream Day holiday, which falls on the third Sunday
+      of July.
+  - bugfix: all icons in the crafting menu (some that you missed) are now fixed permanently
+2024-07-14:
+  SkyratBot:
+  - rscadd: Changed the layout of birdshot engineering atmos and SM, added a proper
+      engineering storage area.
+  - bugfix: Fixes Icemoon syndie listening station APC's from being affected by station-side
+      events
+  - refactor: request managers have been refactored to typescript
+  - bugfix: request manager type filter now works
+  - image: the smoking pipe's directional looks have been altered to make it less
+      ugly
+  - qol: Using ctrl + your quick MOD button now opens module selector on your mouse
+      position
+  - bugfix: Grass turfs will render properly now. Reworked how floors render, please
+      report any bugs!
+  - bugfix: Cameras now properly capture lighting
+  - bugfix: The layering seen in photos should better match the actual game
+  - bugfix: Fixed tables and racks being climbable from half a mile away
+  - rscadd: Adds the Herculean Gravitronic Spinal Implant; an implant that makes you
+      better at athletics. You can upgrade it into an Atlas implant using a gravity
+      anomaly core.
+  - balance: Gravity anomaly cores have had their max number of cores reduces from
+      8 to 6.
+  - balance: Your athletic ability allows you to climb faster.
+  - rscadd: Added airlock pump atmos device to create cycling airlocks
+  - rscadd: Cytology Lab has been added to Icebox
+  - rscadd: Delta now has soy seeds on the Cytology Lab
+  - bugfix: Cytology is playable again on Icebox
+  - bugfix: Fixed dead slime icon not showing when cores are extracted
+  - qol: Slime core removal surgery extracts all cores on completion
+  - rscadd: A new ork mutation which can be acquired by mixing hulk and clumsy.
+  SpaceLoveSs13:
+  - bugfix: fixed RSD, BSRPD, Affection Module, Spray perfume bottles etc. Report
+      further issues.
+  Vishenka0704:
+  - qol: With voting turned off for the dead, you can now understand why you can't
+      vote (being dead).
+  - admin: Voting switch for the dead players
+  thegrb93:
+  - bugfix: Fix laugh not being your selected laugh
+  theselfish:
+  - rscadd: Multiple new pets in the carrier.
+  - bugfix: A few masks are more easily clickable now.
+  - bugfix: Certain stock issues have been fixed. Kilts and Tactical Outfits are back
+      in the vendors.
+2024-07-15:
+  StrangeWeirdKitten:
+  - rscdel: Removed the nuke code from spawning on the Interlink.
+  thegrb93:
+  - code_imp: Anthro borg can use affection module
+  - refactor: Refactors borg affection module
+2024-07-16:
+  Melbert:
+  - qol: Lattices now make the same footstep sound as catwalks
+  - qol: If you're in oxycrit (>50 oxy damage) or otherwise made unconscious through
+      other means, blood loss will only kill you if you're *actually* missing a lethal
+      amount of blood.
+  MrDas:
+  - bugfix: Clown operative reinforcements' uplink no longer break the syndicates'
+      economy by creating TC from nothingness.
+  SkyratBot:
+  - bugfix: Attachment points on toolset implants have been improved, to prevent against
+      recycler related decouplings.
+  - bugfix: Fixes overwatch glasses not adding HUDs
+  - bugfix: Destroying the jungle grass tiles in Tramstation's science wing should
+      no longer open a chasm.
+  - qol: Research nodes can be queued, one per player. RDs can place their node at
+      the beginning of the queue.
+  - sound: added pickup, dropping and opening sound for pill bottle
+  - admin: Ghosts can no longer create deathmatch lobbies or join existing ones when
+      admins disable minigames
+  - bugfix: borgs have alt right click functionality
+  - qol: Pathfinder MODule can now be triggered while wearing the MODsuit to implant
+      yourself without having to pull it out of the suit.
+  - bugfix: You can no longer cause a bluescreen by attempting to recolor non-recolorable
+      loadout items.
+  - spellcheck: Firelocks no longer output their full name in their balloon alert.
+  - spellcheck: Failure message when a xenomorph tries to force open a welded firelock
+      is now a balloon alert.
+  - bugfix: mothroaches will no longer be crawling out of bags every minute
+  - bugfix: Accelerator cannon projectiles no longer grow to absurd sizes after a
+      bit of travel.
+  - admin: Outfit manager UI no longer harddels after closing and thus is usable more
+      than once
+  Thedragmeme:
+  - bugfix: Fixes the Plague hat having what the Plague mask should have
+  nikothedude:
+  - bugfix: Naga constrict no longer resets pixel x to 0 if you cosntrict someone
+      being pulled
+  theselfish:
+  - rscdel: Deleted some unused icons.
+  - bugfix: Even more OBJ fixes.
+2024-07-17:
+  Hardly3D:
+  - bugfix: Added a preview assistant outfit, allowing assistant jumpskirts to be
+      previewed again on character preferences.
+  SkyratBot:
+  - bugfix: ACTUALLY fixed hoverboards being able to be used in space.
+  - balance: However, you can soar space with the holy skateboard. at a slower speed.
+  - balance: Grinding fish no longer gives you uselessly high amount of blood and
+      gibs (unless they're very big)
+  - balance: tweaked the Linked Closets station trait.
+  - bugfix: You can't attach guns/drills/etc. to the Justice traitor mech anymore.
+  - bugfix: Correct emote plays when a human scream. Should have sound now.
+  - rscadd: Love is now stored in the heart.
+  - balance: Characters with the Friendly quirk now have physically bigger hearts.
+  - rscadd: new wizard spells category - perks.
+  - rscadd: adds 9 wizard perks.
+  - rscadd: Pipe pistols now magdump their entire magazine when fired.
+  - rscadd: Pipeguns and their subtypes have a knockback effect.
+  - bugfix: Pipe pistols cannot be bayoneted, as intended.
+  - bugfix: Junk rounds now actually do their extra damage effects against certain
+      mob types. Borgs across the Spinward tremble at the knowledge that these junk
+      weapons can obliterate them with ease.
+  - qol: removed a redundant, annoying reach check that prevents casting a fishing
+      rod before the projectile is generated.
+  - qol: You can now unhook the currently hooked item of a fishing rod with right-click.
+  - bugfix: Fixes dead raptors getting excited when petted or groomed
+  - rscadd: Megaphones now affect text-to-speech.
+  - bugfix: fixing speech modifiers being applied to a tongue's native languages.
+  - bugfix: Atmosphere can no longer flow through closed necropolis gates.
+  - rscadd: If you can't shoot a gun, then... JUST TOSS IT AT THEM (for 0.5 seconds
+      of knockdown and 10-20 an additional brute damage)
+  - bugfix: The Icebox ordnance lab is now once again a habitable temperature.
+  - bugfix: Icebox cytology now has cameras in it.
+  - sound: all materials now have a sound for picking up and dropping
+  - code_imp: items now have pitch vary sound support for dropping and picking up
+      items
+  - bugfix: Wawastation xenobio is no longer filled with BZ
+  - rscadd: Examining high-value paintings now can give a positive moodlet.
+  - qol: Observers can now zoom paintings in and out in the UI.
+  - bugfix: You can no longer fit an infinite amount of drivers into a clown car -
+      making spy-acquired clown cars usable!
+  theselfish:
+  - rscadd: Pirates speak pirate, Felinids speak Neko and you can return to ape. The
+      age of oppression is just about done.
