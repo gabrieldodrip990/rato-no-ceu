@@ -1,0 +1,26 @@
+{
+	"name": "Finger their pussy",
+	"description": "If you're a man you have something else for this.",
+	"usage": "other",
+	"category": "Lewd",
+	"lewd": 1,
+	"distance_allowed": 0,
+	"message": [
+		"%USER% fingers %TARGET%'s vagina.",
+		"%USER% rubs %TARGET%."
+	],
+	"sound_use": 1,
+	"sound_possible": [
+		"/modular_carlinhos/sound/interaction/champ_fingering.ogg"
+	],
+	"sound_range": 7,
+	"interaction_requires": [
+		"self_hand"
+	],
+	"target_required_parts": [
+		"vagina"
+	],
+	"target_arousal": 8,
+	"target_pleasure": 6,
+	"color": "purple"
+}

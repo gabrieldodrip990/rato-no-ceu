@@ -1,0 +1,26 @@
+{
+	"name": "Go down on their cunt.",
+	"description": "Basically a kiss, with extra steps.",
+	"usage": "other",
+	"category": "Lewd",
+	"lewd": 1,
+	"distance_allowed": 0,
+	"message": [
+		"%USER% plays with %TARGET%'s pussy using their tongue.",
+		"%USER% licks %TARGET%'s vagina."
+	],
+	"sound_use": 1,
+	"sound_possible": [
+		"modular_carlinhos/sound/interaction/oral1.ogg",
+		"modular_carlinhos/sound/interaction/oral2.ogg"
+	],
+	"sound_range": 7,
+	"interaction_requires": [
+	],
+	"target_required_parts": [
+		"vagina"
+	],
+	"target_arousal": 8,
+	"target_pleasure": 6,
+	"color": "purple"
+}
