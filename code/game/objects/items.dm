@@ -729,7 +729,7 @@
 /obj/item/proc/on_equipped(mob/user, slot, initial = FALSE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	equipped(user, slot, initial)
-	if(SEND_SIGNAL(src, COMSIG_ITEM_POST_EQUIPPED, user, slot) && COMPONENT_EQUIPPED_FAILED)
+	if(SEND_SIGNAL(src, COMSIG_ITEM_POST_EQUIPPED, user, slot) & COMPONENT_EQUIPPED_FAILED)
 		return FALSE
 	return TRUE
 
@@ -1567,8 +1567,8 @@
 	pickup_animation.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 
 	var/direction = get_dir(source, target)
-	var/to_x = target.base_pixel_x
-	var/to_y = target.base_pixel_y
+	var/to_x = target.base_pixel_x + target.base_pixel_w
+	var/to_y = target.base_pixel_y + target.base_pixel_z
 
 	if(direction & NORTH)
 		to_y += 32
@@ -1851,9 +1851,11 @@
 /obj/item/proc/set_embed(datum/embed_data/embed)
 	if(embed_data == embed)
 		return
+	if(isnull(get_embed())) // Add embed on objects that did not have it added
+		AddElement(/datum/element/embed)
 	if(!GLOB.embed_by_type[embed_data?.type])
 		qdel(embed_data)
-	embed_data = ispath(embed) ? get_embed_by_type(armor) : embed
+	embed_data = ispath(embed) ? get_embed_by_type(embed) : embed
 	SEND_SIGNAL(src, COMSIG_ITEM_EMBEDDING_UPDATE)
 
 /**
